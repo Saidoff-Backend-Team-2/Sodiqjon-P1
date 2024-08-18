@@ -17,8 +17,8 @@ class AboutUsGalleryAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(Contacts)
-class ContactsAdmin(admin.ModelAdmin):
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
     pass
 
 

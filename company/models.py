@@ -29,7 +29,7 @@ class AboutUs(models.Model):
 
     class Meta:
         verbose_name = _('About Us')
-        verbose_name_plural = _('About US')
+        verbose_name_plural = _('About Us')
 
 
 class AboutUsGallery(models.Model):
@@ -45,19 +45,18 @@ class AboutUsGallery(models.Model):
         verbose_name_plural = _('About Us Galleries')
 
 
-class Contacts(models.Model):
+class Contact(models.Model):
     """Contact Page"""
     address = models.TextField(_('address'))
-    phone_number1 = models.CharField(_('phone number1'), max_length=20, validators=[phone_number_validator])
-    phone_number2 = PhoneNumberField(_('phone number2'))
+    phone_number = PhoneNumberField(_('phone number'))
     work_time = models.CharField(_('work time'), max_length=255)
 
     def __str__(self):
-        return f"{self.id}-{self.address}"
+        return f"{self.pk}-{self.address}"
 
     class Meta:
-        verbose_name = _('contacts')
-        verbose_name_plural = _('contacts')
+        verbose_name = _('Contacts')
+        verbose_name_plural = _('Contacts')
 
 
 class SocialMedia(models.Model):
@@ -82,4 +81,4 @@ class ContactWithUs(models.Model):
 
     class Meta:
         verbose_name = _('Contact With Us')
-        verbose_name_plural = _('Contact with Us')
+        verbose_name_plural = _('Contact With Us')
